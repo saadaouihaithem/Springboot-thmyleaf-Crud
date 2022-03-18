@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>FormProduit</title>
+
+<link rel="stylesheet" type="text/css"
+	href="../static/css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+	
+	
+	<link rel="stylesheet" type="text/css"
+	href="../static/css/style.css"
+	th:href="@{css/style.css}" />
+</head>
+<body>
+
+
+
+	<div class="spacer col-md-6 col-xs-12">
+	<p></p>
+		<div class="card">
+			<div class="card-header" >Saisir d'un Produit</div>
+			<div class="card-body">
+				<form th:action="@{save}" method="Post">
+					<div class="form-group">
+						<label class="control-label">Designation</label> <input
+							class="form-control" type="text" name="designation"
+							th:value="${produit.designation}" />
+							<span th:errors="${produit.designation}"></span>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">price</label> <input
+							class="form-control" type="text" name="price"
+							th:value="${produit.price}"/>
+							<span class="red" th:errors="${produit.price}"></span>
+							
+					</div>
+					<div class="form-group">
+						<label class="control-label">Quantity</label> <input
+							class="form-control" type="text" name="quantity"
+							th:value="${produit.quantity}" />
+							
+							
+					</div>
+					<div>
+					<button  type="submit" class="btn btn-primary">Save</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+</html>

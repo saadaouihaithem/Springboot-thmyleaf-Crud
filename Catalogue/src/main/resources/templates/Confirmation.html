@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Comfirmation</title>
+
+<link rel="stylesheet" type="text/css"
+	href="../static/css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+
+	<div class="container">
+	<p><p>
+		<div class="card">
+		
+			<div class="card-header">Confirmation de Commande </div>
+			<div class="card-body">
+
+
+				<div class="form-group">
+					<label>ID:</label> <label th:text="${produit.id}"></label>
+				</div>
+				
+				
+				<div class="form-group">
+					<label>designation:</label> <label th:text="${produit.designation}"></label>
+				</div>
+				
+				
+				<div class="form-group">
+					<label>price:</label> <label th:text="${produit.price}"></label>
+				</div>
+				
+				
+				<div class="form-group">
+					<label >quantity:</label>
+					
+					 <label th:text="${produit.quantity}"></label>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
